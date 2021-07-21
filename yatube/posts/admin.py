@@ -2,7 +2,6 @@ from django.contrib import admin
 from .models import Post, Group
 
 
-# Register your models here.
 class PostAdmin(admin.ModelAdmin):
     """Класс для настройки отображения модели в интерфейсе админки."""
 
@@ -16,7 +15,16 @@ class PostAdmin(admin.ModelAdmin):
     empty_value_display = '-пусто-'
 
 
+class GroupAdmin(admin.ModelAdmin):
+    """Класс для настройки отображения модели в интерфейсе админки."""
+
+    # Перечисляем поля, которые должны отображаться в админке
+    list_display = ('pk', 'title', 'description',)
+    search_fields = ('title',)
+    empty_value_display = '-пусто-'
+
+
 # При регистрации модели Post источником конфигурации для неё назначаем
 # класс PostAdmin
 admin.site.register(Post, PostAdmin)
-admin.site.register(Group)
+admin.site.register(Group, GroupAdmin)
