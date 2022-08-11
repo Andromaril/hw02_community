@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/yandex-praktikum/hw02_community/actions/workflows/python-app.yml/badge.svg?branch=master)](https://github.com/yandex-praktikum/hw02_community/actions/workflows/python-app.yml)
 
-Учебный проект yatybe, репозиторий для сдачи на ревью
+Учебный проект yatube, репозиторий для сдачи на ревью
 
 Создано и зарегистрировано приложение Posts.
 
